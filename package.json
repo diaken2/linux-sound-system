@@ -1,0 +1,71 @@
+{
+  "name": "camillagui",
+  "version": "2.0.0",
+  "private": true,
+  "homepage": ".",
+  "dependencies": {
+    "@babel/core": "^7.19.6",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@mdi/js": "^7.0.96",
+    "@mdi/react": "^1.6.1",
+    "@svgr/plugin-svgo": "^6.5.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "awesome-typescript-loader": "^5.2.1",
+    "axios": "^1.6.7",
+    "chart.js": "^3.9.1",
+    "chartjs-plugin-zoom": "^1.2.1",
+    "d3": "^7.6.1",
+    "http-proxy-middleware": "^2.0.6",
+    "immutable": "^4.1.0",
+    "json8-patch": "^1.0.6",
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.isequal": "^4.5.0",
+    "nth-check": "^2.1.1",
+    "react": "^18.2.0",
+    "react-chartjs-2": "^4.3.1",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dom": "^18.2.0",
+    "react-scripts": "^5.0.1",
+    "react-tabs": "^5.1.0",
+    "react-tooltip": "^4.4.3",
+    "reactjs-popup": "^2.0.5"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/d3": "^7.4.0",
+    "@types/jest": "^29.2.0",
+    "@types/json8-patch": "^1.0.1",
+    "@types/lodash": "^4.14.186",
+    "@types/react": "^18.0.23",
+    "@types/react-dom": "^18.0.7",
+    "@types/react-tabs": "^5.0.4",
+    "ajv": "^8.11.0",
+    "jest-watch-typeahead": "^2.2.0",
+    "source-map-loader": "^4.0.1",
+    "ts-loader": "^9.4.1",
+    "typescript": "^3.9.10"
+  }
+}

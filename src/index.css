@@ -1,0 +1,479 @@
+/* For available CSS variables see public/css-variables.css */
+
+body {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+hr {
+  margin: 3px 0;
+  border: 1px solid var(--box-border-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+input:not([type="checkbox"]),
+select {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  box-sizing: border-box;
+  border-radius: var(--border-radius);
+  border: var(--input-border);
+  height: 28px;
+  padding: 0 4px;
+}
+
+input:not([type="checkbox"]):focus,
+select:focus {
+  border: var(--focused-input-border);
+  outline: none;
+}
+
+input[type="range"] {
+  background-color: transparent;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+}
+
+textarea {
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+textarea.logfileviewer {
+  resize: none;
+  accent-color: var(--background-color);
+}
+
+.react-tabs__tab--selected {
+  color: var(--text-color);
+  background: var(--background-color);
+  border: var(--box-border);
+  border-bottom: none;
+  bottom: calc(-1 * var(--box-border-width));
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.react-tabs__tab--selected:after {
+  /* Removes the white bar below selected tab headers */
+  visibility: hidden;
+}
+
+.react-tabs__tab-list {
+  border-bottom: var(--box-border);
+}
+
+.checkbox-area {
+  cursor: pointer;
+  display: inline-block;
+  padding: 2px;
+}
+
+.tabpanel {
+  border: 4px;
+  text-align: left;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 450px;
+}
+
+.wide-tabpanel {
+  border: 4px;
+  text-align: left;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 550px;
+}
+
+.tabpanel > * {
+  margin: 5px 0;
+}
+
+.configapp {
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.configapp > :last-child {
+  margin-left: 10px;
+}
+
+.configtabs {
+  float: left;
+  text-align: left;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.setting {
+  box-sizing: border-box;
+  display: table;
+  width: 100%;
+  height: 28px;
+  text-align: left;
+}
+
+.setting-label {
+  display: table-cell;
+  width: 45%;
+  text-align: right;
+  border-right: 5px solid transparent;
+}
+
+.setting-label-wide {
+  display: table-cell;
+  width: 75%;
+  text-align: right;
+  border-right: 5px solid transparent;
+}
+
+.setting-input {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.setting-button {
+  vertical-align: middle;
+}
+
+.textbox {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.textbox-large {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.setting-input-default {
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+  color: var(--disabled-text-color);
+}
+
+.small-setting-input {
+  width: 5em;
+}
+
+.optional-setting-input {
+  display: table-cell;
+  width: 67%;
+  vertical-align: middle;
+}
+
+.small-optinal-setting-input {
+  width: 4em;
+}
+
+.box {
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: var(--border-radius);
+  border: var(--box-border);
+  padding: 5px 12px 12px 12px;
+}
+
+div .popup-content {
+  width: 50%;
+  background-color: var(--background-color);
+  border: var(--box-border);
+  border-radius: var(--border-radius);
+}
+
+@media (max-width: 1023px) {
+  div .popup-content {
+    width: 80%;
+  }
+}
+
+.horizontally-spaced-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.horizontally-spaced-content > *:not(:last-child) {
+  margin-right: 5px;
+}
+
+.vertically-spaced-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.vertically-spaced-content > *:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.two-column-grid {
+  display: grid;
+  grid-column-gap: 5px;
+  grid-row-gap: 2px;
+  grid-template-columns: auto auto;
+}
+
+.two-column-grid .alignRight {
+  justify-self: right;
+}
+
+.split-10-90 {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-gap: 5px;
+}
+
+.split-10-90 > * {
+  align-self: center;
+}
+
+.button {
+  color: var(--button-text-color);
+  text-decoration: none;
+  box-sizing: border-box;
+  background-color: var(--button-background-color);
+  border-radius: var(--border-radius);
+  border: var(--button-border);
+  font-size: smaller;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.file-link {
+  color: var(--link-color);
+  text-decoration: none;
+  user-select: none;
+  font-weight: bold;
+}
+
+.button-with-text {
+  padding: 3px 6px;
+}
+
+.button-with-icon {
+  width: 36px;
+  height: 36px;
+  color: var(--button-icon-color);
+}
+
+.smallbutton {
+  padding: 1px 3px;
+  height: 28px;
+  width: 32px;
+}
+
+.tinybutton {
+  padding: 1px 3px;
+  width: unset;
+  height: unset;
+}
+
+/* Disable hover for mobile/tablets */
+@media (hover: hover) and (pointer: fine) {
+  .button:hover {
+    background-color: var(--hovered-button-background-color);
+    border: var(--hovered-button-border);
+  }
+}
+
+.button:active {
+  background-color: var(--active-button-background-color);
+  border: var(--active-button-border);
+}
+
+.disabled-button,
+.disabled-button:hover,
+.disabled-button:active {
+  background-color: var(--disabled-button-background-color);
+  opacity: var(--disabled-button-opacity);
+  cursor: default;
+}
+
+.highlighted-button,
+.highlighted-button:hover,
+.highlighted-button:active {
+  background-color: var(--highlighted-button-background-color);
+  border: var(--highlighted-button-border);
+}
+
+.config-status {
+  margin: 10px 4px 2px;
+}
+
+.db-label {
+  display: inline-block;
+  width: 7ch;
+  text-align: right;
+  margin-left: 5px;
+}
+
+.db-label-muted {
+  display: inline-block;
+  width: 7ch;
+  text-align: right;
+  margin-left: 5px;
+  color: var(--neutral-text-color);
+  font-style: italic;
+}
+
+.versions {
+  width: 100%;
+  margin: 15px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  font-size: xx-small;
+}
+
+.quick-config-switch > * {
+  margin: 5px;
+}
+
+.success-text {
+  color: var(--success-text-color);
+}
+
+.error-text {
+  color: var(--error-text-color);
+}
+
+/* Изменяем свойства justify-content и align-items для .gaind-header-container и .gaind-channels-container, чтобы выровнять их элементы по горизонтали и вертикали */
+/* Добавляем свойство order для каждого элемента внутри .gaind-channel-info, чтобы задать их порядок отображения */
+.gaind-tab-container {
+  margin: auto; /* Центрирование контейнера */
+}
+.gainbutton {
+  position: relative;
+  left: -5px;
+}
+
+.gaind-header-container {
+  display: flex;
+  margin-bottom: 10px;
+  gap: 30px;
+  position: relative;
+  left: 82px;
+}
+
+.gaind-channel-container {
+  display: flex;
+  justify-content: center; /* Выравниваем элементы по центру горизонтали */
+  align-items: center; /* Выравниваем элементы по центру вертикали */
+  margin-bottom: 10px;
+  gap: 25px;
+}
+
+.gaind-channel-info {
+  display: flex;
+  align-items: center;
+}
+
+.gaind-mute-button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff; /* Цвет фона кнопки */
+  color: #fff; /* Цвет текста кнопки */
+  cursor: pointer;
+}
+
+.gaind-button {
+  padding: 5px 10px;
+  border: none;
+  background-color: #f0f0f0; /* Цвет фона кнопок + и - */
+  cursor: pointer;
+}
+
+.gaind-button:hover {
+  background-color: #ccc; /* Изменение цвета при наведении на кнопку */
+}
+
+.gaind-input {
+  width: 40px; /* Ширина поля ввода */
+  text-align: center; /* Выравнивание текста по центру */
+}
+
+.gaind-channels-container {
+  display: flex; /* Выстраиваем элементы в ряд */
+  align-items: flex-start; /* Выравниваем элементы по центру вертикали */
+  flex-direction: column;
+}
+
+.pipeline-channel {
+  width: 100%;
+  text-align: center;
+}
+
+.drag-handle {
+  cursor: move;
+  outline: transparent;
+}
+
+.dragSource {
+  opacity: 0.5;
+  z-index: 10;
+}
+
+.dropTargetParent {
+  position: relative;
+}
+
+.dropTarget:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: var(--border-radius);
+  border: var(--highlighted-button-border);
+}
+
+.vertical-text {
+  transform: rotate(270deg);
+  transform-origin: center;
+  text-align: center;
+}
+
+.eqslider {
+  width: 200px;
+  height: 30px;
+  transform: rotate(-90deg);
+  transform-origin: left;
+  position: absolute;
+  left: 50%;
+  bottom: -5%;
+}
+
+.eqslider-wrapper {
+  display: inline-block;
+  width: 30px;
+  height: 200px;
+  position: relative;
+  padding: 5px 5px;
+}
